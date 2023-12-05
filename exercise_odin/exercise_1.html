@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Exercise Odin
+      </h1>
+      
+      <div id="container">
+      </div>
+
+    <script>
+
+const container = document.querySelector('#container');
+const content = document.createElement('div');
+
+content.textContent = 'Text-content!';
+
+container.appendChild(content);
+
+
+let para = document.createElement('p');
+para.textContent = 'Hey, I\'m red.';
+para.style.color = 'red';
+document.getElementById('container').appendChild(para);
+
+
+let head3 = document.createElement('h3');
+head3.textContent =  'I\’m a blue h3!';
+head3.style.color = 'blue';
+document.getElementById('container').appendChild(head3);
+
+
+
+const newDiv = document.createElement("div"); 
+newDiv.style.border = "thick solid black"; 
+newDiv.style.backgroundColor = "pink";
+
+const head1 = document.createElement('h3'); 
+head1.textContent = 'I\'m in a div';
+
+newDiv.appendChild(head1);
+
+const para2 = document.createElement('p');
+para2.textContent = 'ME TOO!';
+
+newDiv.appendChild(para2);
+
+// Hint for this one: after creating the div with createElement, append the <h1> and <p> to it before adding it to the container
+// document. < adds content to our html > 
+document.body.insertBefore(newDiv, null);
+
+// Syntax
+// node.insertBefore(newnode, existingnode)
+// Parameter Values
+// Parameter 	Type 	Description
+// newnode 	Node object 	Required. The node object you want to insert
+// existingnode 	Node object 	Required. The child node you want to insert the new node before. If set to null, the insertBefore method will insert the newnode at the end
+    </script>
+</body>
+</html>

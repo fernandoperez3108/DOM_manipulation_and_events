@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<div data-foo-foo="foo" data-bar-bar="bar"></div>​
+
+<script>
+
+var elm = document.querySelector('div');
+
+//get
+console.log(elm.dataset.fooFoo); //logs 'foo'
+console.log(elm.dataset.barBar); //logs 'bar'
+
+//set
+elm.dataset.gooGoo = 'goo';
+console.log(elm.dataset); //logs DOMStringMap {fooFoo="foo", barBar="bar", gooGoo="goo"}
+
+//what the element looks like in the DOM 
+console.log(elm); //logs <div data-foo-foo="foo" data-bar-bar="bar" data-goo-goo="goo">
+
+</script>
+</body>
+</html>

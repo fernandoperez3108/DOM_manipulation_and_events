@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<p>Hey Yo!</p>
+
+<script>
+
+//returns a new text node, taken from the DOM
+console.log(document.querySelector('p').firstChild.splitText(4).data); //logs Yo!
+
+//What remains in the DOM...
+console.log(document.querySelector('p').firstChild.textContent); //logs Hey
+
+</script>
+</body>
+</html>

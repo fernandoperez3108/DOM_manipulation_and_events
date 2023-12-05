@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<ul></ul>
+
+<script>
+
+//create ul element and document fragment
+var ulElm = document.querySelector('ul');
+var docFrag = document.createDocumentFragment();
+
+//append li's to document fragment
+["blue", "green", "red", "blue", "pink"].forEach(function(e) {
+    var li = document.createElement("li");
+    li.textContent = e;
+    docFrag.appendChild(li);
+});
+
+//append cloned document fragment to ul in live DOM
+ulElm.appendChild(docFrag.cloneNode(true));
+
+//logs <li>blue</li><li>green</li><li>red</li><li>blue</li><li>pink</li>
+console.log(document.querySelector('ul').innerHTML);
+
+//logs [li,li,li,li,li] 
+console.log(docFrag.childNodes);
+
+</script>
+</body>
+</html>

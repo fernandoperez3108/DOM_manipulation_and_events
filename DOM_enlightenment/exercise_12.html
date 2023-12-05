@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+
+<script src="https://raw.github.com/codylindley/domjs/master/builds/dom.js"></script>
+<script>
+
+//dom()
+console.log(dom());
+console.log(dom(''));
+console.log(dom('body'));
+console.log(dom('<p>Hellow</p><p> World!</p>'));
+console.log(dom(document.body));
+console.log(dom([document.body, document.body]));
+console.log(dom(document.body.children));
+console.log(dom(dom('body')));
+
+//dom().html()
+console.log(dom('ul li:first-child').html('one'));
+console.log(dom('ul li:first-child').html() === 'one');
+
+//dom().text()
+console.log(dom('ul li:last-child').text('three'));
+console.log(dom('ul li:last-child').text() === 'three');
+
+//dom().append()
+dom('ul').append('<li>4</li>');
+dom('ul').append(document.createElement('li'));
+dom('ul').append(dom('li:first-child'));
+
+</script> 
+</body>
+</html>

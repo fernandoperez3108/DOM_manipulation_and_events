@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const objectAssign = Object.assign(
+  {
+    set foo(val) {
+      console.log(val);
+    },
+  },
+  { foo: 1 },
+);
+// Logs "1"; objectAssign.foo is still the original setter
+
+const spread = {
+  set foo(val) {
+    console.log(val);
+  },
+  ...{ foo: 1 },
+};
+// Nothing is logged; spread.foo is 1
+
+    </script>
+</body>
+</html>
